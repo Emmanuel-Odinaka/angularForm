@@ -1,0 +1,88 @@
+<div class="ui container">
+  <form class="ui form">
+    <div class="field">
+      <label>First Name</label>
+      <input
+        class="form-cotrol"
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="First Name"
+        #firstName="ngModel"
+        ngModel
+        required
+      />
+    </div>
+    <div class="field">
+      <label>Last Name</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        placeholder="Last Name"
+        ngModel
+        required
+      />
+    </div>
+    <div class="field">
+      <label>email</label>
+      <input type="email" id="email" name="email" placeholder="Email" ngModel />
+    </div>
+    <div class="field">
+      <label>Phone Number</label>
+      <input
+        type="number"
+        id="phoneNumber"
+        name="phoneNumber"
+        placeholder="Phone Number"
+        ngModel
+      />
+    </div>
+    <div class="field">
+      <label>Country</label>
+      <fui-select class="ui fluid dropdown selection" ngModel #select>
+        <fui-select-option
+          *ngFor="let country of countries"
+          [value]="country.name"
+        >
+          {{ country.name }}
+        </fui-select-option>
+      </fui-select>
+    </div>
+    <div class="field">
+      <label>Occupation</label>
+      <fui-select class="ui fluid dropdown selection" ngModel #select>
+        <fui-select-option
+          *ngFor="let occupation of occupations"
+          [value]="occupation"
+        >
+          {{ occupation }}
+        </fui-select-option>
+      </fui-select>
+    </div>
+    <div class="grouped fields">
+      <label for="choice">Successful:</label>
+      <div class="field">
+        <fui-radio-button name="choose" value="true" required ngModel
+          >True</fui-radio-button
+        >
+      </div>
+      <div class="field">
+        <fui-radio-button name="choose" value="false" required ngModel
+          >False</fui-radio-button
+        >
+      </div>
+      <a routerLink="/route">
+        <button
+          class="ui secondary button"
+          type="submit"
+          value="success"
+          (click)="onSubmit()"
+          ngModel
+        >
+          submit
+        </button>
+      </a>
+    </div>
+  </form>
+</div>
