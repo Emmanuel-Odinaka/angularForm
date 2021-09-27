@@ -1,0 +1,8 @@
+<button
+  class="ui green large inverted centered button"
+  id="{{ but.id }}"
+  *ngFor="let but of childButton"
+  (click)="showSuccess(but.name)"
+>
+  {{ but.name }}
+</button>

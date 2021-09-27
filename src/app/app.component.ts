@@ -9,21 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   constructor() {}
 
+  "title": "fomantic"
   ngOnInit(): void {
   }
 }
-
-
-// ngAfterViewInit() {
-  //   //use here
-  //   $('button').click(function () {
-    //     alert('Encentral');
-    //   });
-    // }
-    // }
-    
-    //   $('button').click(function() {
-    //     alert('GeeksForGeeks');
-    // });
-    // (<any>$('.ui.radio.checkbox')).checkbox();
-    // (<any>$('.ui.dropdown')).dropdown();

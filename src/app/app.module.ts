@@ -3,18 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
-import { FormComponent } from './component/form/form.component';
 import { FomanticUIModule } from 'ngx-fomantic-ui';
-import { RouteComponent } from './component/route/route.component';
+import { HomepageComponent } from './component/homepage/homepage.component';
+import { CustomButtonComponent } from './component/custom-button/custom-button.component';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, RouteComponent],
+  declarations: [AppComponent, HomepageComponent, CustomButtonComponent],
   imports: [
     BrowserModule,
     FomanticUIModule,
@@ -22,13 +21,10 @@ import { RouteComponent } from './component/route/route.component';
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
+      timeOut: 1500,
       positionClass: 'toast-top-right',
       preventDuplicates: false,
     }),
-    RouterModule.forRoot([
-      { path: '', component: FormComponent },
-      { path: 'route', component: RouteComponent },
-    ]),
   ],
   providers: [],
   bootstrap: [AppComponent],
